@@ -3,7 +3,7 @@ describe "SerpApi Desktop JSON" do
   describe "Related Questions for Bitcoin (emoji 👏 issue)" do
 
     before :all do
-      @response = HTTP.get 'http://localhost:3000/search.json?q=How+do+you+get+bitcoins%3F&location=Dallas&hl=en&gl=us&source=test'
+      @response = HTTP.get 'https://serpapi.com/search.json?q=How+do+you+get+bitcoins%3F&location=Dallas&hl=en&gl=us&source=test'
       @json = @response.parse
     end
 
