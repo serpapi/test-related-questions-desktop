@@ -21,11 +21,11 @@ describe "SerpApi Desktop JSON" do
         @question = @json["related_questions"].detect{|e| e["question"] == "How do you earn bitcoins?"}
       end
 
-      it "has title from Time" do
+      it "has correct title" do
         expect(@question["title"]).to eql("Earn Bitcoins in 8 different ways")
       end
 
-      it "links Time" do
+      it "links cprrect website" do
         expect(@question["link"]).to eql("http://earn-bitcoins.com/")
       end
 
