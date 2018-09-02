@@ -3,7 +3,7 @@ describe "SerpApi Desktop JSON" do
   describe "Related Questions for Bitcoin (emoji 👏 issue)" do
 
     before :all do
-      @response = HTTP.get 'https://serpapi.com/search.json?q=How+do+you+get+bitcoins%3F&location=Dallas&hl=en&gl=us&source=test'
+      @response = HTTP.get 'https://serpapi.com/search.json?q=How+do+you+earn+bitcoins%3F&location=Dallas&hl=en&gl=us&source=test'
       @json = @response.parse
     end
 
@@ -15,10 +15,10 @@ describe "SerpApi Desktop JSON" do
       expect(@json["related_questions"]).to be_an(Array)
     end
 
-    describe "have \"How do you earn bitcoins?\" question" do
+    describe "have \"How can I earn Bitcoins for free?\" question" do
 
       before :all do
-        @question = @json["related_questions"].detect{|e| e["question"] == "How do you earn bitcoins?"}
+        @question = @json["related_questions"].detect{|e| e["question"] == "How can I earn Bitcoins for free?"}
       end
 
       it "has correct title" do

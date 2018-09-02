@@ -18,7 +18,7 @@ describe "SerpApi Desktop JSON" do
     describe "have \"Is coffee really good for your health?\" question" do
 
       before :all do
-        @question = @json["related_questions"].detect{|e| e["question"] == "Is coffee really good for your health?"}
+        @question = @json["related_questions"].detect{|e| e["question"] == "Is drinking coffee good or bad for you?"}
       end
 
       it "has title from Time" do
