@@ -15,18 +15,18 @@ describe "SerpApi Desktop JSON" do
       expect(@json["related_questions"]).to be_an(Array)
     end
 
-    describe "have \"Is coffee really good for your health?\" question" do
+    describe "have a question" do
 
       before :all do
-        @question = @json["related_questions"].detect{|e| e["question"] == "Is drinking coffee good or bad for you?"}
+        @question = @json["related_questions"][0]
       end
 
       it "has title from Time" do
-        expect(@question["title"]).to eql("Coffee and health: What does the research say? - Mayo Clinic")
+        expect(@question["title"]).to_not be_empty
       end
 
       it "links Time" do
-        expect(@question["link"]).to eql("https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/coffee-and-health/faq-20058339")
+        expect(@question["link"]).to_not be_empty
       end
 
       it "has a snippet" do 
