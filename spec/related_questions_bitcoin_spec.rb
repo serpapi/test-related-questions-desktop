@@ -25,7 +25,7 @@ describe "SerpApi Desktop JSON" do
         expect(@question["title"]).to_not be_empty
       end
 
-      it "links cprrect website" do
+      it "links correct website" do
         expect(@question["link"]).to_not be_empty
       end
 
